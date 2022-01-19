@@ -16,3 +16,6 @@ Please follow the steps below:
 
 7. python manage.py runserver
 
+# Start Commands for docker-compose file
+Builds, (re)creates, starts, and attaches to containers for a service.  
+`docker-compose up`
