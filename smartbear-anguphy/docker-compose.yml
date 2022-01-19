@@ -3,8 +3,6 @@ version: '3.4'
 services:
   postgres:
     image: postgres:latest
-    volumes:
-      - ./data/db:/var/lib/postgresql/data
     environment:
       - POSTGRES_NAME=postgres
       - POSTGRES_USER=postgres
@@ -13,7 +11,7 @@ services:
       - "5432:5432"
 
   api:
-    #    image: andretr/smartbear-docker-app:latest
+    # image: andretr/smartbear-anguphy-api:latest
     build:
       context: .
       dockerfile: ./Dockerfile

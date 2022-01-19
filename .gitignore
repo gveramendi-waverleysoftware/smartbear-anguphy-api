@@ -3,7 +3,7 @@
 *.pot
 *.pyc
 
-smartbear_anguphy/__pycache__/
+smartbear-anguphy/__pycache__/
 apps/users/migrations/__pycache__/
 apps/users/__pycache__/__pycache__/
 apps/__pycache__/__pycache__/

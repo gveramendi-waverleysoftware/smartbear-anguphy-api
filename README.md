@@ -6,11 +6,11 @@ Please follow the steps below:
 
 2. source venv/bin/activate
 
-3. pip install -r smartbear_anguphy/requirements.txt
+3. pip install -r smartbear-anguphy/requirements.txt
 
 4. create database anguphydb with credentials user: angyphy, password: password
 
-5. cd smartbear_anguphy
+5. cd smartbear-anguphy
 
 6. python manage.py migrate
 
