@@ -1,0 +1,24 @@
+### Django ###
+*.log
+*.pot
+*.pyc
+
+smartbear_anguphy/__pycache__/
+apps/users/migrations/__pycache__/
+apps/users/__pycache__/__pycache__/
+apps/__pycache__/__pycache__/
+
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
