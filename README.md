@@ -10,7 +10,9 @@ Please follow the steps below:
 
 4. create database anguphydb with credentials user: angyphy, password: password
 
-5. python manage.py migrate
+5. cd smartbear_anguphy
 
-6. python manage.py runserver
+6. python manage.py migrate
+
+7. python manage.py runserver
 
