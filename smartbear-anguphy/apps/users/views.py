@@ -73,3 +73,10 @@ class DeleteUserView(APIView):
 
         return Response({'message': f'User with id: {pk} does not exists.'}, status = status.HTTP_400_BAD_REQUEST)
 
+class CurrentUserView(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    def get(self, request):
+        serializer = UserSerializer(self.request.user)
+        return Response(serializer.data)
+
