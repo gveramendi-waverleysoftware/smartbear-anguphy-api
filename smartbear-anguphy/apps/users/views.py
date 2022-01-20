@@ -6,7 +6,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.pagination import PageNumberPagination
 
 from apps.users.models import User
-from apps.users.serializers import UserSerializer, UserUpdateSerializer, ChangePasswordSerializer
+from apps.users.serializers import UserCreateSerializer, UserSerializer, UserUpdateSerializer, ChangePasswordSerializer
 
 
 class RegisterView(APIView):
@@ -46,6 +46,16 @@ class UserDetailView(APIView):
             return Response(user_serializer.data, status = status.HTTP_200_OK)
 
         return Response({'message': f'User with id: {pk} does not exists.'}, status = status.HTTP_400_BAD_REQUEST)
+
+class CreateUserView(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    def post(self, request):
+        serializer = UserSerializer(data = request.data)
+        serializer.is_valid(raise_exception = True)
+        serializer.save()
+
+        return Response(serializer.data, status = status.HTTP_201_CREATED)
 
 class UpdateUserView(APIView):
     permission_classes = (IsAuthenticated,)
